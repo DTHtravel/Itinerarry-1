@@ -41,7 +41,9 @@ p{margin:0;}
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-  text-align:center;color:#fff;overflow:hidden;padding:clamp(2rem,6vw,5rem) clamp(1.2rem,5vw,3rem);}
+  text-align:center;color:#fff;overflow:hidden;padding:clamp(2rem,6vw,5rem) clamp(1.2rem,5vw,3rem);
+  background-image:url("https://cdn.pixabay.com/video/2022/09/21/132140-752588954_tiny.jpg");
+  background-size:cover;background-position:center;background-color:var(--blue-dark);}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
   opacity:0;transition:opacity 1.3s ease;}
 .hero video.is-playing{opacity:1;}
@@ -281,11 +283,9 @@ p{margin:0;}
 
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <video autoplay muted loop playsinline preload="auto" referrerpolicy="no-referrer-when-downgrade" aria-hidden="true"
-         poster="https://cdn.pixabay.com/video/2022/09/21/132140-752588954_tiny.jpg">
-    <source src="https://cdn.pixabay.com/video/2022/09/21/132140-752588954_large.mp4" type="video/mp4" media="(min-width:900px)">
-    <source src="https://cdn.pixabay.com/video/2022/09/21/132140-752588954_medium.mp4" type="video/mp4">
-  </video>
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" referrerpolicy="no-referrer-when-downgrade" aria-hidden="true"
+         poster="https://cdn.pixabay.com/video/2022/09/21/132140-752588954_tiny.jpg"
+         src="https://cdn.pixabay.com/video/2022/09/21/132140-752588954_medium.mp4"></video>
   <div class="hero-overlay"></div>
   <div class="hero-topo"></div>
   <div class="hero-content">
@@ -626,18 +626,38 @@ p{margin:0;}
   /* ---- Hero video fade-in on playing / graceful hide on error ---- */
   var vid = document.querySelector('.hero video');
   if(vid){
+    var VID_BASE = 'https://cdn.pixabay.com/video/2022/09/21/132140-752588954_';
+
     vid.addEventListener('playing', function(){ vid.classList.add('is-playing'); });
+
     var hideVid = function(){ vid.style.display='none'; };
     vid.addEventListener('error', hideVid);
-    vid.querySelectorAll('source').forEach(function(src){
-      src.addEventListener('error', function(){
-        // only hide once every candidate source has failed
-        if(vid.networkState === 3 || !vid.currentSrc){ hideVid(); }
-      });
+
+    // Serve the larger file only to wide screens; phones keep the lighter default.
+    // Done in JS because <source media> is evaluated once at parse time and is
+    // unreliable in Safari/iOS.
+    if(window.matchMedia && window.matchMedia('(min-width:900px)').matches){
+      vid.setAttribute('src', VID_BASE + 'large.mp4');
+      vid.load();
+    }
+
+    // Autoplay nudge. iOS may reject the promise if it fires before the element
+    // is ready, or while the tab is backgrounded, so retry on the events that
+    // signal readiness and on the first user interaction.
+    var tryPlay = function(){
+      if(!vid.paused) { return; }
+      var p = vid.play && vid.play();
+      if(p && p.catch){ p.catch(function(){}); }
+    };
+    tryPlay();
+    vid.addEventListener('loadedmetadata', tryPlay);
+    vid.addEventListener('canplay', tryPlay);
+    document.addEventListener('visibilitychange', function(){
+      if(!document.hidden){ tryPlay(); }
     });
-    // Nudge autoplay on browsers that need it
-    var p = vid.play && vid.play();
-    if(p && p.catch){ p.catch(function(){}); }
+    ['touchstart','click'].forEach(function(evt){
+      document.addEventListener(evt, tryPlay, {once:true, passive:true});
+    });
   }
 
   /* ---- Sticky-panel crossfade + location label via IntersectionObserver ---- */
