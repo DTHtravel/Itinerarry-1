@@ -136,6 +136,8 @@ p{margin:0;}
 .day-body p{margin-bottom:.95rem;color:#3a3f52;font-size:clamp(.95rem,1.1vw,1.01rem);
   line-height:1.72;letter-spacing:.001em;}
 .day-body p:last-child{margin-bottom:0;}
+.day-body ul{margin:0 0 .95rem;padding-left:1.25rem;color:#3a3f52;font-size:clamp(.95rem,1.1vw,1.01rem);line-height:1.72;letter-spacing:.001em;}
+.day-body li{margin-bottom:.3rem;}
 
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;}
 .chip{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1px solid var(--line);
@@ -291,7 +293,7 @@ p{margin:0;}
   <div class="hero-content">
     <img class="hero-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wgARCAGQAZADASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAUIAQYHBAID/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMEAQIFBgf/2gAMAwEAAhADEAAAAe/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDLW/05uk79836HG/VrWx3M/QtbAAAAAAAAAAAAAAAAAAAAPHGaPNr+3zuMb8yr7ZrO2ap6ubWNv16Z8zDtqLlPeWQmyAAAAAAA8Xt4ZZ164qM7kNufRT4zc/NXbEcmSTj9frNY1tyqMvaW5VGFuZGm1nKO+wfFboSzi4TGfPzIiWpr0o7cyVY7OR5jOP7pW/paWm2ioluaO33jLmyfh5NMx5ODfPVDTPopQtbAAAAAAAOGdz4Z0o+R904XbHtRarrfbHBmplt/u0D1le3WkbpMeOs8z4Zb+pPci8/cuL20Y5nvMnjgzVahJuC9nWuFmLeHtSlNLb1I9BFuFm6yWbr5hOD2TxS25h0XVPvzekxJ8z33nNaiJ/aedp+EljPs7ATZAAAAAAAcM7nwzpR8jtjU62PWjnh5exw/kHVuU+1q2e3HVtp8jYVJttUnrR/VtKl20yYzjgzVa1badf95T8qwylvXnNha+2tdxs3WSzfAmDiyxHh2VztOY7xK5p4jJH6dfcJsgAAAAAAAOGdz4Z0o+R2xqd0vuxWE/DhuoceTyRnm7H6KHsv7nhrapNtqk92H6tpUu2mTGccGarUJNwnuqlwM4z4W2ppcumnoYdws3WSzcGQ4soAAAAAAAAAAADjPZljWo63DrR1H9drcYca7H9uVIFfZV20WLulYbP4yMZUt62Q9qnZiZONLipltMXtK7WKNMhU2AAAAAAAAAAAAAAAj/j1xnN09iL+a+Nl83xr1nOzfrCfrnPq/KN9lbWQ9MFO39gtbAAAAAAAAAAAAAAAAAAflGS/wA1sQab+qusD9zH65a/5tlRoT1SHxKhpD1/J++cZ6G4ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/8QALBAAAAUCBAUEAgMAAAAAAAAAAQIDBAUABhATFTYREhQWQDM0NVAgkCMkYP/aAAgBAQABBQL9onMXm+vcypSGaSQLnMRfq+PKknLEFwAgYPq3KOe2OUxD8eApG50JN3xGocxhR+qmJIsTEQF1ryUpJNMwjSNMpXDgDuMHimzcqKLLDHFZORct/CWdtWw6rGVqsZWqxlJvWaw4KqpIJarGVqsZWqxlarGVqsZWqxlJqprJKSLBJQJONMbHVIykpBisrT9k3kGDRa2bekYyfjZY2IqJgo5ZouhQQI3S8K/Pe/hGXFJRh4yTbSrC7dpflau0Lk3Wz+SxU9a093VeKyyNs1HuzMZUogYmD1XNfJPHCNMXSjonhX572o60Yl1Edkw1SFj8iJiiU1tShoybkGKUlH9jxFdjxFPkStpSPQI6lux4mux4mmDJKOjrk3Wy+SxU9a093VLM+vhWdozDqmdkRyNcUGjXVGtIqkXRes1EVgDiLFDIZ+FfnvahduYXg0BtclRTjqoXCX3BDbixuTdbQQCR1GPrUo+tSj6U9a093YjKuM+VUEy1RvxriRcA7Q5FEfDvz3tQu3ML8KHVVaw8bSwl9wQ24sbk3XXAK4BXAMLT3djpzYVpNqorWUrUcAhHKMWyqwBwDw7897ULtzC+1QNKVbiYpWthL7ghtxY3JutuQFXnZEPXZEPXZEPRg4KWnu7zL897ULtylVU0EZd+MnMt0DunaSZUW+EvuCG3Fjcm62XyWKnrWnu7zL897TS83bRj32+qTn5KWCrMhjZmMvuCG3Fjcm62XyWKnrWnu7zL1Zu3LzSpStKlK0qUpGBmVzRNlcqhSlIXGUjJE85ExsinPYz8dIK3M0i5IshieKk822I9+hdP+TO9apn1BnR3jZM5HrVQ9FXSOtnJ54iBSi8bFT1BnWelzfTqELlxpSjGidJOaeqNlm51MhmBBbJvf4nEgcekdgmgr1rCnHyf05/SjPjQIQ85IIpkZvBzzHj+ZJH+3ENTi7dPzFK86pjTpRMH/XNPqClApeUvOIAYAIQBoCFLRSFLRiEPWQjQpJmrIR/Zz//EACIRAAIBBAIDAQEBAAAAAAAAAAABAgMREjEQIRMwMkBwIv/aAAgBAwEBPwH+s5q9iMshST1+ZtaY6bvYne3RDr/TE7+mTsrnlPKRmpE54nlPKQnkzy98TliQlkipKzISy4dRaYmmuvTU+SmrswR8ssmVIpFNJ7FFIe+KpS0SgpGcUuiE22YKT6Eremp8lLfE/ojoqlHh7PEyUXEpa4cE1YjTxLeqp8lOSWx1UJZPiqUeHvisUte6SurHiPEhRS1xKORGOPHi74lHIjHH8Pd7GQ3Yy2ZCf5Ld3MejG+zEsWf9V//EADYRAAEDAwAFCQcEAwAAAAAAAAIBAwQABRESITFBcRATFBUzNFFh0SIwQFKxwfAGQnCBMpGh/9oACAECAQE/Af5ZS7RVd5lD11b7n0sjRQ0dGo01mTnmizj4boJvskWPZ30/Znwk8w2mfBfKruMnomgzr8fGrOJRnOlO6gT/AL5Uw8LwI4Gxfcw4/SHUbVa6hD56WwjuOplvci6y1pVvtiSm1NSxXUI/PXUI/PU+2JFbQ0LNN2YTaRzS3clugJL0srjFXCIkVxARc6qtURXmS0iXRXdVzgpFNNHYvI/fo5mTD7eRqG404yJM/wCPubT3ofzdV5eNpsVbXGuguUkVzp0KjLY17CSgkPR8gBYqzyXXTJHCzV4kusmKNlinZTrqYcLNR+7Dw+1aBeFWFFRTz5Vfe3Th61GuDsYFEN9TP1OjzRuouko/erNeH5j6tuYxiurI86SYxzxjy+lMMiy2jY7E9zae9D+bqv3Zjx5LX3UPzfUpcvHxWrD2hcKv3aBw5Iq4YBfJK66jedRZrcnPN7qvvbpw9eR62MONE0iY0vCrbZEgu84h51YpuO22SkA4VfdWnvQ/m6rtFckAKNpTVlfIvb1JT7ow2M+GyttWHtC4Vfu0DhyR+7Dw+3JYNp/1V97dOHr76LIWO4jiV18fyUt+c3ClSJTkhcuLyQpqxSUkTOamzVlEiqmMcgXkwbRvR5IU4omcJnNTZayj01THwJuyUeRpFTXldi7sefnRT3UQzyPsqureuP7+1SppNKOE818k/PpSzFBHdP8Ab9N3pXTnNMgMxFUxt4Z8ajvE4Ziv7fRF+EJlVeF3wRU/3j0pbcKtuCuMlnXxrq8XCIn9efpXV5rzekWzb542Usd0XTMMa/HhihYfAyIFT2uPhj+Vf//EAEQQAAECAwIICA0DAgcAAAAAAAEAAgMEERIxECAhQXJzk7ETIjIzNVFhcQU0QENQgYKRkrLB0eEUI1JTkBUlQmBjoaL/2gAIAQEABj8C/uiWaivV6QswGh/bmXBxGhjzd1FEEO4Wqq83DKUQ9tIdcjlUGo9GOh1pVFjhQhVCY83kVX6aGcg5X2wRGnkg5PRcScLLZGRreslCSm4ENpeDYdD3Lh4Y47b+0IRI/FZ/HrVEYkvl62KyITh2kUTZaCBWlpzirThRwND5GBMTMGETdbeBVdIym1C6RlNqF0jKbUKkKagRNF4OExI0RsNgvc40C6RlNqF0jKbULpGU2oXSMptQukZTahdIym1CESDEbEYbnNNQjDizsux4va6IAQg0eEJUk5uFGJ0jK7UIQ4M7LxHm5rYgJwRJWaH7bv8ArtTozJqPOxxxQWNqGow5aIREGXg4gocSwXi11VQL6hwzhcHDu8jktB28YosxjGg54UU1Hq6kJmWPY5pvaepTXs/MMeU7nfMVPaf0CltazfiP0ipX2vlOB3Aki29rHkfxwQJtvm3gnuzoOaag5RhiOzVoFxIpp1HKnF7AKZx5HJaDt4wS0zEMxbiQ2uNInYr5rafhGJ4NmXPcPNRc/rRa4EEZCCmWnfsRv24n0KfJxy8MfSti+9c9N/GPsuem/jH2UxLw62YcRzBXsKlpaJWzEiNYaLnpv4x9lz038Y+yhycAuLId1q9T2n9ApbWs34j9IqV9r5TgmZTO9nF78yDokNsq3/lOX3IGbixJk9XIamjJDhsFkK93woRGXFOeGkwya1GZUGUprXDjXnyOS0HbxgkdQ3dhdEaKCOwRPXccErMG98JpPfhnte/epHXs34k9p/QKXJNAIrd68eltqF49LbULx6W2oT9IqV9r5TiWuLY/jRQ25rNrAz1704MIDWmlKJkUMDS4Vu8kktB28YJHUN3YZJ2ey8bsEnokf+jhnte/epHXs34k9p/QYLlcrsEr7XynE4Wx20zJsaGLRAoQFzb/AHJgIpeuEezLn7VQeSSWg7eMEjqG7sMrB/hCLj6z+MEk0/06+/Lhnte/epHXs34k9p/QKFCdc94afeuXNbT8LlzW0/C5c1tPwnDqNFK+18p8tktB28YJHUN3YHRYrwxjRUuOZRpy5rjRg6mi5QpaHyojgwJkJnJY0NGGe1796kdezfiT2n9ApbWs34j9IqV9r5T5bJaDt4wQZVslAcITAwEuOWi8Rl/iKsTEUNhf0oYoPzg/xeYbRt0EHP1uxJ7Xv3qR17N+JPaf0CltazfiP0ipX2vlPlsoZeWjRQGOrYYTTKujpvZFdHTeyK6Om9kVRng2P3vbZ3psbws9rqeYZd6yg1oAAyADEnHskJlzTGcQRDOXKpJ75CZa0Rmkkwzky4k5EhSMw9hfkc2GSDkCl3O8HzQAitJPBHrxHf5dNco+aKlokaSmIbBaq50Mgck/7ULHxgHDMufCsvigFWWxm1wOhNeC9t4XA2uPStEXE5AmvMUBrriufCY23lfye30Q42RcmVaM6imK5oFgcpcHBsvik8Wwi9/+lql5w8ou/c9agTYzGy7uXBt5UQ2QpMOyMYucZ8KlKdvoh3cmetRQ9odxBeuFhsDHMIILcigSrTznGd3It/Uxj2E5EYTuWBZPeoRd5lmXSUq55AbU1qudhKUiFwsZTVeMM9/oijQAOxWrIr1qjhUKoaK3YDZaBXqRstAr1LjtDu9c0z3IVY007FzTPd/c5//EACsQAQACAAQEBQUBAQEAAAAAAAEAESExQVEQYaHwIHGBkcFAULHR8ZDhYP/aAAgBAQABPyH/AFE/IRj9vUC2WeJm3o3mpIEYc7H63vDDYxPzSxdc0ecMmTETX7Zj7YwTf9S106SCBKTEYxOhr2l3uCavAsCi8l5/a7wdLtWqLdohfS2YhdhXS8Zo4MJ2WRsDmGr9CAAFBMadsUcfScxUpCLa4R5rHZcAMn6M762PSVztP5nafzO2/mWBm34x45IeDD1Z2n8ztP5nafzO0/mdp/M7T+ZlZJNPJIn3a8xgWOCCgKr7+BJpFO/OZmQCnoPBiieKNKMQOiQoOoC3nTgLzuEy62B9zf08AAlljxTJAwz6gUKzW5r9Jso2JRsSjYlA2Be8OymaUc2fbCOtr8kk6qSjYlGxKNiUbEo2JRscKAMgyyJlH/L4AZB/0mz04QLF3wLs9aD14Ms5S1yD2uHgFYanHEjB6IwmBehLrMOFTcfpVmWiNxbZrCNWVBwiLwb5Q6+ZE7ugUiZjMExAXIt6L0WYv9hVgD8cYEB9k842qC4oReXTS1hxwID60jd4lcfedBl2rb4O0bzo+EOstno49QS/O6/icfepvDe/QMesxJCjsGAE/voobpWVENKGN5GIYKZBEpRYfN+lWdx2cT5UydjIfWeUV9aB5MevHsW+du2cdJ0GRJkKrQYZ378zt35nbvzMSHYzo+McC5YAxPS84bbrgc3h1v5Iu5NtrreICxwfTFncdnEmrdZGsS/p7Lidi3zt2zjpOg8LkPach7TkPbh0fgjald5ubyl4epFW8/tY6JXgStZni9DR5oBBQFAfTLO47OIlbQG3ACvSn3n5cexb527Zx0nQZWyYWZ0gn89H89H89BE5KPedH9fFncdnBz1naAayszYDkP29Ybd+vDUMavIAKOPYt87ds46ToMu1bfB2jedH9fFlnIgkCrjVgTGoKtmI+evq4MuQEzVh5Gh6+DsW+du2cdJ0GXatvg7RvOj+tgL1FlJnU7r+J3X8Tuv4gw29h96SkUxC2vzeR7wC7UFAbeBM974L4jUEt++DUtcdIaTTsESESiSBAry8DXFH3HygBgqQ5if+UUhFNHCV/rZh7saR1gB55GV8PQqgzRPSZWCC12lw4cJxqfz2U0lNn7QSi22Nco6obxJzlELho0llDFBaNywdtzzal/NhXKdhLzmgNG/WziMCEVNKJ/UfqV22T7R1j8Tr/wAoC2uoXtFxqCtnNmExoIz18wv8ketlyhl8QpGs56PiBqDLJpO/IaXTE4VwMYn2ZLKZyNUKgSNnBpjHpEzEuCSwUQ024MKwW0q4ms3NKuUmDZUufw8IBmAsYT+H/wBOf//aAAwDAQACAAMAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEPmBAAAAAAAAAAAAAAAAAAAAAcmuZLAAAAAAAACPcgnPPD8IZqA3QprAAAAAAAABHSCyApHGnSCjLzJLAAAAAAAABVA4BDoUBMKCAzYxAAAAAAAAABSJRiDoUCoWCAAAAAAAAAAAAABz3zAVJQOg3iAAAAAAAAAAAAAAAApgdCPhAAAAAAAAAAAAAAAAAAAuZb6bTqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//EACERAQACAgIDAQEBAQAAAAAAAAEAESExEFEwQXFAcIHw/9oACAEDAQE/EP6z7yZ2Kqbl+a93QFRDjgL0EAWeG+i/UH1MQbiqgl+pfqLQkUUrhwURLGUFGY4zvhShiEHTw7oSWRcqo38Y5qQgohjSZAJt+yyPBN/2ICwQTqVpgoKAAPDum7jdNE1Jo8b/ALw7Sb/vCClXCV3AGQ8W6IrATEbh1Jo8bfvGhN/3zZZK9w7oTXAxTDGOENr4OlsqUfhX1IstsxHRX+xpl6lrRQ/77LFOvyOCG6O4lLF7LdS4qe4Aqe/6r//EACkRAQABAwIEBQUBAAAAAAAAAAERACExQWFRcaGxEIGRwdEwQOHw8XD/2gAIAQIBAT8Q/wBZgMcdYnhOJ89s0zYFl882IbYotFJDx/jo4ftsvyJdFovvjhUvQb6G5dIw74yUaDJIZkReDWddYpMaVFhubANb3dCL0v8AJSfRKHBm/IWt56HzUK76fmtWHU9+FJAgxjYfet96HzW+9D5pokkIjZfap5RQxBqTx8EBjNJzPxV1Al1T2qKEkQ1xMsPTOtSxUrTomTt4RmNSRmYcwx5I0IMRtaLFsP0e97qXCnRyo3I7Nyi6Ow/jSCkFkOOPanYANedOYCMxzo8wF4eNdDpvvRqFUf1XT+9Il7pveOX7pSe0gDYlQIFots2oUwE2EZENV40OBIqMjN5TieO1YlwDy+j3vdX623gUk37qBRj3Guhd66h38CU07RW96PzS4lhMkZ/ldP7+A9JuUQyXH19+NNGSUIjKPHagmXCgC8/pd73VJWRluGm9BgGsyPoFNRYEDixAfPnSqlroXeuod/Dofg/S510/v9YBUpNuZFbL1ag5XN/FX/IwaHI/XwDHBF6LPBFvAwGADLoR4OM7Gdp+aGCQRbmvv9jE6gHAIQ63itjFY3QlJI0dTpdegSci7mUF53nkqjATeRqifMs8xUF6aJXUKLbSoUI5cAms7jV9PtJ2WgOZUBCUyFzRfNnhTfkgEKQCIze8vnQhSRC3FD5xL8ZalijGxkgaOVQfKG+CDRyo3/1T/8QAKRABAAEDAgQGAwEBAAAAAAAAAREAITFBURBhcYEgQJGh8PFQscHRkP/aAAgBAQABPxD/AKhTUlRBTSSCzpnhP41GgASrpSRxw8dML9VjrQO2BJTa9x5a1LMTQDOdg7bOIqAvEDAQXdM016IIUNzs5tigtTJyDcfxgF34SELgxncUvd1+iU2d4BhEuNYDKzChayw0u5h0GXnbStaR6EXCDA9B7/i0GGVDEMDErrsMXqFiRkKcqSIByQl5qbm2CuWvwk7VbepFj5/Y8qIEAAMBQgDTIBOVuej2ogrmEubV/lZQzJmRYnl6RSJ1FOSBEnFnHk3wIXoLKGSEmN/BTpxyLzhe9kqSY4QhPuysEoBKh38dOnTp06c/2mGVRkIwidqkpycETACMI33oYfXcmAAuVQihng0vVCIyiZKyfvs6isIWAXtwD6u983EARxa9poseLZsITpZCtIRLV87emclKEkmTGsUG3BJqFniQhYkHpSjgyAKUwyIlLBFUkoyrv5JoDMDvlX0FfQV9FQaEMAhO9L94FVqFldktuqmkrbw5KJreRLIiUBkJ3amT+FfQV9BX0FfQUSH6KIQkVaJuhUM9IKzHfg6V7TPnohAOjUYpzMUomUGBI3Ea8DW4Sov9ksUJ4aUiEidk4xbLoj/UL3qKhGt7OHaKMwsXQYlIcQRrr5XcI6VhDoGJK2paBjqH+0beoBaaIBsIHcpPDTE0AcIiJSCrMrEHUYvsKegaNKJhRMjTHEePW70ArEQAsF7UGt5QnSkQYbWeK/eIDk7CsgButOKhGY78Gvl9/AMYqJkOoxe6hpdy2s5SyoTH8Nw7kszrVQZWlQxklsAF21JsC8yhEFkUyzDbqUeYjG4ywYjfDTRggcq7AVLs7sNDsQdvL7qzcilzkAgvfVWc1SKIkUsmlI5eZzCe0+MNycunBQeCDwB1VwAZo71wZNomhAIqJcSfAMY4QfQXtQyY2oSz1ymNccqcYFCtdb9YI7vHIAPiG6hU3vGkUhUjAIpcmJoII8xurEIuB5Dn7aMKer0DoA9vGG5OXTio+jV9Gr6NxDGODimsjmDnl7tMUoyAyVKQGsSic6QUTfnpQb/IpF+jS9i0h0bgzRVTgIANDzO6sBsSHKMns6LMtNddR+Rb4w3Jy6cFDulmcBbDowtScN24K3O3cTMCD9cAxjwx8mix5rdWgvrIVKnaoVrhwggTRQkbqn4nE0Sl0BXoNRZEexvYDxhuTl04qEZjvwa+X38Axjz24aRIwAICBYm1JZpRXDtagJktlGGaoaSQyBwTQR8SsHIS2svQox4w3Jy6cVCMx34NfL7+AYx5txRU13KVBBhYc+CFCpTKdBAeqipocG6drMNxh1RajNvDBEACwAQB4GcL1agCCJcSjrj3aVRADd4uVE7ueEEwCSJajwaCEqq2ACzRjvwdKdfAI4i4aXRvjaBIAlQ71p52OtR1qOtQOSo8MFR18EFR18EdfwclxSkW1imVIxv/AJ1kQhCwkbG1NL2FVLYkL1JFHCJSmYRPLUoR2i7EeaYhoaTj8AJWp+5Eimh0qEn4vSlmxoNsTJbZ1/EIJNFFZlrSRtIFW/elINyBKLCeU09NKRCJZCxE0wKYu2CO7+65lIEvN+n9obZk11/d9aNLJuaiu9P3UiwtAAFSrdIdqDGCCIKMfh/n91MYn7NHSoDkdUNG56iFgknWliaVwwpnuy9ijCMISJgkYmKRbIA5uX7e6sYh+pL+oe1YJAwCLmgM+v8A4q8XS5AQztcrRPR0gEZHH4YGARsjR44wQHYoakoIkbLmKttcGD1GoWuSibDtyrSkwcyMm7GWlpClGTdjNOrZrhO018b/AJQV5hcDYtYpf4XtQAQY/wCnH//Z" alt="DTH Travel">
     <p class="eyebrow">A Journey Crafted Exclusively For You</p>
-    <h1 class="hero-title">A Sojourn Through <em>Sri Lanka</em></h1>
+    <h1 class="hero-title">A Sojourn Through<br><em>Sri Lanka</em></h1>
     <div class="divider-grad"></div>
     <p class="prepared-label">Prepared Exclusively For</p>
     <p class="client-name">Our Valued Guests</p>
@@ -312,13 +314,13 @@ p{margin:0;}
     <h2>Your Journey at a Glance</h2>
     <p class="sub">From the cosmopolitan coast to the misty highlands, the wild south-east and the sweeping bays of the south</p>
     <div class="stat-grid">
-      <div class="stat"><span class="num">7</span><span class="lab">Days</span></div>
-      <div class="stat"><span class="num">5</span><span class="lab">Destinations</span></div>
+      <div class="stat"><span class="num">7</span><span class="lab">Unhurried Days</span></div>
+      <div class="stat"><span class="num">5</span><span class="lab">Destinations, Ocean to Cloud Line</span></div>
       <div class="stat"><span class="num">4</span><span class="lab">Signature Hotels</span></div>
-      <div class="stat"><span class="num">2</span><span class="lab">Game Drives</span></div>
-      <div class="stat"><span class="num">1</span><span class="lab">Hill-Country Railway</span></div>
-      <div class="stat"><span class="num">1</span><span class="lab">Whale Safari</span></div>
+      <div class="stat"><span class="num">1</span><span class="lab">Whale Encounter Aboard Your Own Yacht</span></div>
     </div>
+    <p class="sub" style="margin-top:clamp(2.2rem,4vw,3rem);margin-bottom:.9rem;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">EXCLUSIVELY YOURS</span> &mdash; a clifftop colonial manor, reserved for your group alone</p>
+    <p class="sub" style="margin-bottom:0;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">PRIVATE</span> tea atelier, closing with bespoke tea-infused cocktails</p>
   </div>
 </section>
 
@@ -353,12 +355,13 @@ p{margin:0;}
         <p class="day-subtitle">Bandaranaike International Airport &rarr; Colombo</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>Your Sri Lankan journey opens on the western seaboard, where a warm welcome awaits the moment you step into the arrivals hall at Bandaranaike International Airport. The short transfer south traces the edge of the Indian Ocean, the water flashing between coconut palms and the first glimpses of a city that has drawn traders and travellers to its harbour for centuries. By the time you reach Colombo, the island has already begun to reveal its character &mdash; unhurried, green and quietly grand.</p>
-          <p>Sri Lanka's cosmopolitan capital rewards a slow first afternoon. Colonial facades stand shoulder to shoulder with a glassy modern skyline, tree-lined avenues open onto the sea, and the scent of frangipani drifts through streets shaped by Portuguese, Dutch and British hands. A visit to a local Rotary Club project offers a gentle, grounding introduction to the people behind the postcard, before the evening softens into rest at your hotel above the Galle Face seafront.</p>
+          <p>Your Sri Lankan journey begins at Bandaranaike International Airport, where our representative will meet you before your transfer into Colombo. The drive into the city gives you a first look at the coast, with the Indian Ocean alongside you for much of the way.</p>
+          <p>Colombo is Sri Lanka's commercial capital and its most cosmopolitan city, colonial buildings sit beside busy markets, and a modern skyline along the seafront. Portuguese, Dutch and British influence over the centuries has given the city a character shaped by trade and the mixing of cultures.</p>
+          <p>The afternoon is set aside for the Rotary Club project and institution visits, a chance to meet local community initiatives and see the social work being done on the ground. It's a good way to begin and sets the tone for the days that follow.</p>
+          <p>The rest of the evening is free to settle in and recover from your flight.</p>
         </div>
         <div class="chips">
-          <span class="chip"><span class="ic">📍</span>33 km</span>
-          <span class="chip"><span class="ic">🚗</span>45 min</span>
+          <span class="chip"><span class="ic">🚗</span>1 hour</span>
           <span class="chip"><span class="ic">🍽️</span>Half Board</span>
         </div>
 
@@ -387,21 +390,23 @@ p{margin:0;}
     </section>
 
     <!-- DAY 2 -->
-    <section class="day-section" data-day="2" data-location="Tea Country, Nuwara Eliya">
-      <div class="mobile-img" style="background-image:url('https://images.pexels.com/photos/32326696/pexels-photo-32326696.jpeg?auto=compress&cs=tinysrgb&w=1100&h=700&fit=crop')" role="img" aria-label="Waterfall in lush Sri Lankan forest"><span class="mobile-loc"><span class="dot"></span>Tea Country, Nuwara Eliya</span></div>
+    <section class="day-section" data-day="2" data-location="Tea Country, Ella">
+      <div class="mobile-img" style="background-image:url('https://images.pexels.com/photos/32326696/pexels-photo-32326696.jpeg?auto=compress&cs=tinysrgb&w=1100&h=700&fit=crop')" role="img" aria-label="Waterfall in lush Sri Lankan forest"><span class="mobile-loc"><span class="dot"></span>Tea Country, Ella</span></div>
       <article class="day-card">
         <div class="watermark"></div>
-        <div class="day-head"><span class="day-badge">Day 02</span><span class="day-tag">Colombo · Nuwara Eliya · Ella</span></div>
+        <div class="day-head"><span class="day-badge">Day 02</span><span class="day-tag">Colombo · Ella</span></div>
         <h2 class="day-title">Into the Emerald Hill Country</h2>
-        <p class="day-subtitle">Colombo &rarr; Nuwara Eliya &rarr; Ella</p>
+        <p class="day-subtitle">Colombo &rarr; Ella</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>Morning brings one of the great transitions of any Sri Lankan journey. A scenic flight lifts you off the coastal plain and carries you into the central highlands, where the land folds into deep valleys and ridge after ridge of tea gardens disappears into drifting mist. It is a change of world in the span of a single morning &mdash; from the heat of the shore to the cool, fragrant air of the mountains.</p>
-          <p>The afternoon belongs to the tea country's Tamil heart, in the village of Kandapola. Here you meet the pluckers whose hands sustain the estates, share a table of dosai, vade and idli washed down with a signature local brew, and try the meditative art of mandala-making. Draped in colourful attire and carried along by traditional music, you step briefly inside a living culture before the road winds down to Ella, a laid-back mountain village wrapped in valley views.</p>
+          <p>This morning you board a scenic flight to the hill country. It's a fine way to take in Sri Lanka's change in landscape, as the coastal plains give way to tea estates, deep valleys and mountain ridges wrapped in mist.</p>
+          <p>On arrival, check in and spend the rest of the day at leisure. With all the essentials and the finer details already taken care of, you can simply enjoy the property. Gourmet breakfasts, lunches and dinners are prepared with freshly sourced local ingredients, and select wines, beer and spirits, along with fruit juices and soft drinks, are all included.</p>
+          <p>In the afternoon, you'll head out for an artisanal tea factory experience curated with Uga Ghiri. Set in the heart of tea country, this is a hands-on look at how Ceylon tea makes its way from bush to cup &mdash; through withering, rolling, oxidation and firing, with each stage explained as you go.</p>
+          <p>You'll try your hand at rolling the leaf yourself, learning the technique that shapes the tea and draws out its character. The session finishes with a guided tasting, comparing different grades and picks side by side, and learning how to pick out the differences in colour, aroma and strength. It's an enjoyable couple of hours, and a good way to understand why Ceylon tea has the reputation it does.</p>
         </div>
         <div class="chips">
           <span class="chip"><span class="ic">✈️</span>Scenic Flight</span>
-          <span class="chip"><span class="ic">🚗</span>2.5–3 hrs</span>
+          <span class="chip"><span class="ic">⏱️</span>approx. 55 min</span>
           <span class="chip"><span class="ic">🍽️</span>All-Inclusive</span>
         </div>
 
@@ -440,8 +445,10 @@ p{margin:0;}
         <p class="day-subtitle">A morning on the Ella&ndash;Badulla line</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>This morning you board one of the most celebrated railway journeys in the world. The train from Ella to Badulla threads through tunnels, tea gardens and forested slopes, the open windows framing a highland panorama that shifts with every curve. The great sweep of the Nine Arch Bridge and the ingenious Demodara Loop &mdash; where the line spirals beneath itself to master the gradient &mdash; are feats of colonial engineering that have earned their fame many times over.</p>
-          <p>The afternoon slows to the rhythm of the estates. A retired tea planter with more than thirty years in the industry leads a Teaology session through the gardens, his stories weaving the science and romance of Ceylon tea into something quietly unforgettable. Later, that same leaf reappears in a tea-infused cocktail, blended with premium spirits and fresh island ingredients &mdash; a fitting toast to a day spent among the hills.</p>
+          <p>This morning, you'll take one of the world's best-known train rides &mdash; the run from Ella to Badulla, around 45 minutes to an hour. The line passes through tunnels, tea gardens and forested slopes, with the view from the window changing constantly.</p>
+          <p>Along the way, the train passes over the Nine Arch Bridge and through the Demodara Loop, a clever piece of colonial-era engineering where the track spirals underneath itself to manage the gradient. Do bear in mind that you won't see a great deal of either from on board, as the train moves through fairly quickly &mdash; the appeal is in the journey itself and the scenery either side, rather than the landmarks.</p>
+          <p>In the afternoon there's a Teaology session hosted by Mr. Salinda Madugalle, a retired tea planter who started out in 1977 and spent more than thirty years in the tea fields, later working as a consultant across a number of estates in the hill country. Now retired but still keen to keep those memories alive, Salinda will walk you through what life as a planter was like in the old days, and show you how things on the estates have changed since. He's fluent in Tamil after all his years in the estates, so he'll often stop to chat with the workers and pass on their stories too.</p>
+          <p>Later in the afternoon, there's a tea-infused cocktail session, where you'll see how different Ceylon teas are blended with spirits and fresh local ingredients. It's a relaxed way to end the day.</p>
         </div>
         <div class="chips">
           <span class="chip"><span class="ic">🚂</span>Train ~1 hr</span>
@@ -467,12 +474,20 @@ p{margin:0;}
         <p class="day-subtitle">Ella &rarr; Yala, via Wellawaya</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>Leaving the cool highlands behind, the road descends through Wellawaya towards the dry south-eastern plains, the landscape transforming with almost cinematic speed &mdash; tea-covered slopes giving way to open scrubland, paddy fields and sun-warmed rock. Within a couple of hours you have crossed from one Sri Lanka into another, arriving at the threshold of the island's most storied wilderness.</p>
-          <p>By late afternoon you are aboard an open jeep, easing into Yala National Park as the light begins to soften. Famous for one of the highest leopard densities on earth, Yala also shelters elephants, sloth bears, spotted deer and a dazzling cast of birdlife among its lagoons, dunes and thorny scrub. Guided by an experienced tracker, you search the golden hour for movement in the undergrowth &mdash; the moment every safari lives for.</p>
+          <p>This morning you head to Yala, dropping down from the hills towards the dry southeastern plains. The route through Wellawaya is a scenic one, with tea slopes giving way to scrubland, paddy fields and rocky outcrops &mdash; a good illustration of how quickly the landscape changes here.</p>
+          <p>In the afternoon, you'll head out on a game drive in Yala National Park. Yala is Sri Lanka's best-known wildlife reserve, with one of the highest leopard densities anywhere in the world. There are also elephants, sloth bears, spotted deer, wild buffalo, crocodiles and a lot of birdlife, set against thorny scrub, lagoons, rock formations and coastal dunes.</p>
+          <p>Late afternoon is one of the better times for sightings, as animals come out to feed and gather at waterholes. You'll be with an experienced tracker and naturalist, exploring the park by jeep. Do make sure your camera is fully charged &mdash; there's plenty worth photographing, and with a bit of luck you may spot one of the leopards the park is known for.</p>
+          <p>The park is also home to a good range of endemic and migratory birds. Keep an eye out for the Sri Lanka grey hornbill, Sri Lanka jungle fowl, Sri Lanka wood pigeon, crimson-fronted barbet, black-capped bulbul, blue-tailed bee-eater and brown-capped babbler.</p>
+          <p>The drive lasts around two and a half to three hours, after which you'll return to the camp to freshen up.</p>
+          <ul>
+          <li>Start times: 14:30 for Block 1</li>
+          <li>Duration: 2.5 – 3 hours</li>
+          <li>Maximum six guests per drive</li>
+          </ul>
+          <p>There's sundown in the afternoon to enjoy with your colleagues.</p>
+          <p>Tonight, dinner is al fresco out in the wilderness. Dining by the beach, with the Indian Ocean close by, makes for an atmospheric and intimate end to the day.</p>
         </div>
         <div class="chips">
-          <span class="chip"><span class="ic">📍</span>60 km</span>
-          <span class="chip"><span class="ic">🚗</span>1 hr 30 min</span>
           <span class="chip"><span class="ic">🐆</span>Game Drive</span>
           <span class="chip"><span class="ic">🍽️</span>All-Inclusive</span>
         </div>
@@ -508,15 +523,18 @@ p{margin:0;}
       <article class="day-card">
         <div class="watermark"></div>
         <div class="day-head"><span class="day-badge">Day 05</span><span class="day-tag">Yala · Weligama</span></div>
-        <h2 class="day-title">First Light, Then the Sea</h2>
+        <h2 class="day-title">Along the Southern Shore</h2>
         <p class="day-subtitle">Yala &rarr; Weligama</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>The day begins before the heat, venturing out at first light when Yala is at its most atmospheric and its wildlife most active. In the cool morning air, with birdsong rising from the scrub and the chance of a leopard slipping across the track, the park feels wholly your own. Those who prefer a gentler start may instead plant a tree &mdash; a small, lasting contribution to the landscape that has given so much.</p>
-          <p>In the afternoon the journey turns to the ocean. The south-coast road unspools past palm-fringed bays, fishing villages and long stretches of golden sand, the Indian Ocean glittering alongside for much of the way. Your destination is Weligama &mdash; the "sandy village" &mdash; and, perched dramatically on a headland above the surf, Cape Weligama, where the horizon opens wide and the slow pace of the coast takes over.</p>
+          <p>This afternoon, transfer along the south coast to Weligama, around two and a half to three hours. The coastal road is a pleasure in itself, with palm trees, fishing villages, wide bays and stretches of sand, and the ocean in view for much of the way.</p>
+          <p>Weligama means "sandy village", and it's known for its wide crescent bay, gentle surf and the stilt fishermen along the coast nearby.</p>
+          <p>You'll arrive and check in at Cape Weligama, set on a headland high above the Indian Ocean and one of the island's best-known resorts. It's a Relais &amp; Châteaux property, with villas that come with their own pools, wide ocean views from almost everywhere, and a quiet, easy feel to it.</p>
+          <p>As the sun goes down, there's the Moon Pool &mdash; an infinity pool on the clifftop &mdash; or you can simply wander the gardens for a while before dinner.</p>
+          <p>Dinner is at the Ocean Terrace Restaurant, where the menu leans on local seafood alongside international dishes, with the ocean stretching out in front of you.</p>
         </div>
         <div class="chips">
-          <span class="chip"><span class="ic">🐆</span>Dawn Game Drive</span>
+          <span class="chip"><span class="ic">🌊</span>South-Coast Drive</span>
           <span class="chip"><span class="ic">🚗</span>2.5–3 hrs</span>
           <span class="chip"><span class="ic">🍽️</span>Half Board</span>
         </div>
@@ -558,8 +576,9 @@ p{margin:0;}
         <p class="day-subtitle">Weligama &rarr; Mirissa &rarr; Weligama</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>This morning a private yacht carries you out from Mirissa into some of the finest whale-watching waters on the planet. Here the continental shelf falls away close to shore, drawing the blue whale &mdash; the largest creature ever to have lived &mdash; within reach, alongside sperm whales, spinner dolphins and flying fish. Unhurried and comfortable on the open water, you wait for the tell-tale plume and the slow, majestic roll of a giant breaking the surface.</p>
-          <p>Back on land, the afternoon turns reflective with a guest lecture on the Ayurvedic approach to immunity &mdash; a tradition practised on the island for more than two thousand years and still woven into the rhythm of daily life. As the light fades, you gather on the sand for a farewell beach dinner, the waves close by and the warm hospitality of Sri Lanka framing a final, memorable evening.</p>
+          <p>This morning, you'll head out whale watching by private yacht from Mirissa. The waters off the south coast are among the best in the world for seeing blue whales, as the continental shelf drops away steeply close to shore and brings them within easy reach. Sperm whales, spinner dolphins and flying fish are common too, and having the yacht to yourselves means you can take your time out on the water.</p>
+          <p>The afternoon is given over to a conference session, or alternatively a guest lecture on the Ayurvedic approach to immunity. Ayurveda has been practised in Sri Lanka for more than two thousand years, and its focus on balance, prevention and local herbs is still very much part of everyday life here.</p>
+          <p>This evening, there's a farewell beach dinner &mdash; a good way to finish the trip, with the sound of the waves nearby.</p>
         </div>
         <div class="chips">
           <span class="chip"><span class="ic">🐋</span>Whale Watching</span>
@@ -585,11 +604,10 @@ p{margin:0;}
         <p class="day-subtitle">Weligama &rarr; Bandaranaike International Airport</p>
         <div class="day-divider"></div>
         <div class="day-body">
-          <p>After breakfast and a final unhurried morning by the ocean, you begin the journey back towards Bandaranaike International Airport. The route follows the coastline and countryside once more &mdash; palm-fringed beaches, small fishing communities and the everyday rhythm of life along the southern shore passing gently by the window.</p>
-          <p>You leave with a journey's worth of memory: the cosmopolitan energy of Colombo, the misty tea estates and celebrated railway of the hill country, the leopards of Yala and the great whales of the south. Sri Lanka has a way of staying with its travellers &mdash; and, we hope, of calling them back to its shores once again.</p>
+          <p>After breakfast and a last free morning on the south coast, you'll be transferred to Bandaranaike International Airport in good time for your flight.</p>
+          <p>You head home with memories of a varied trip and, we hope, with plans to return.</p>
         </div>
         <div class="chips">
-          <span class="chip"><span class="ic">📍</span>170 km</span>
           <span class="chip"><span class="ic">🚗</span>2 hr 30 min</span>
           <span class="chip"><span class="ic">🍽️</span>Breakfast</span>
         </div>
