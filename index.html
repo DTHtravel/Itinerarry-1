@@ -308,9 +308,9 @@ p{margin:0;}
       <div class="stat"><span class="num">7</span><span class="lab">Unhurried Days</span></div>
       <div class="stat"><span class="num">4</span><span class="lab">Signature Hotels &amp; Destinations</span></div>
     </div>
-    <p class="sub" style="margin-top:clamp(1.4rem,3vw,2rem);margin-bottom:.9rem;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">PRIVATE</span> Whale Encounter Aboard Your Own Yacht</p>
-    <p class="sub" style="margin-top:0;margin-bottom:.9rem;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">PRIVATE</span> hosted tea-infused cocktail tasting, curated for your group</p>
-    <p class="sub" style="margin-top:0;margin-bottom:0;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">EXCLUSIVELY YOURS</span> &mdash; a contemporary hill-country retreat, reserved for your group</p>
+    <p class="sub" style="margin-top:clamp(1.4rem,3vw,2rem);margin-bottom:.9rem;text-transform:uppercase;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">PRIVATE</span> Whale Encounter Aboard Your Own Yacht</p>
+    <p class="sub" style="margin-top:0;margin-bottom:.9rem;text-transform:uppercase;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">PRIVATE</span> Hosted Tea-Infused Cocktail Tasting, Curated For Your Group</p>
+    <p class="sub" style="margin-top:0;margin-bottom:0;text-transform:uppercase;"><span style="color:var(--green);font-weight:600;letter-spacing:.14em;">EXCLUSIVELY YOURS</span> &mdash; A Contemporary Hill-Country Retreat, Reserved For Your Group</p>
   </div>
 </section>
 
@@ -684,17 +684,40 @@ p{margin:0;}
     }
   }
 
-  var dayObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var day = entry.target.getAttribute('data-day');
-        var loc = entry.target.getAttribute('data-location');
-        setActiveDay(day, loc);
-      }
+  /* Centre-line scroll approach: activate whichever day-section crosses the
+     vertical middle of the viewport. Works regardless of window height, so it
+     stays reliable on short / windowed / framed laptop screens where a single
+     day-section can be taller than the visible area. */
+  var daySections = Array.prototype.slice.call(document.querySelectorAll('.day-section'));
+  var currentDay = null;
+  function updateActiveDay(){
+    var center = window.innerHeight / 2;
+    var best = null, bestDist = Infinity;
+    daySections.forEach(function(sec){
+      var r = sec.getBoundingClientRect();
+      if(r.bottom <= 0 || r.top >= window.innerHeight) return;
+      var dist = (center >= r.top && center <= r.bottom)
+        ? 0
+        : Math.min(Math.abs(r.top - center), Math.abs(r.bottom - center));
+      if(dist < bestDist){ bestDist = dist; best = sec; }
     });
-  }, { threshold: 0.35, rootMargin: '-10% 0px -10% 0px' });
-
-  document.querySelectorAll('.day-section').forEach(function(sec){ dayObserver.observe(sec); });
+    if(best){
+      var day = best.getAttribute('data-day');
+      if(day !== currentDay){
+        currentDay = day;
+        setActiveDay(day, best.getAttribute('data-location'));
+      }
+    }
+  }
+  var dayTicking = false;
+  function onDayScroll(){
+    if(dayTicking) return;
+    dayTicking = true;
+    requestAnimationFrame(function(){ updateActiveDay(); dayTicking = false; });
+  }
+  window.addEventListener('scroll', onDayScroll, {passive:true});
+  window.addEventListener('resize', onDayScroll, {passive:true});
+  updateActiveDay();
 
   /* ---- Day-card fade-up ---- */
   var cardObserver = new IntersectionObserver(function(entries){
